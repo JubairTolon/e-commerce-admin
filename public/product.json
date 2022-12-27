@@ -1,0 +1,58 @@
+[
+    {
+        "_id": "63a7d5ff494fcabcdcffa410",
+        "available": false,
+        "balance": "$3,938.31",
+        "picture": "https://i.ibb.co/CsSHTGk/61q-a-Eh-P2-QL-AC-SR360-460.jpg",
+        "color": "silver",
+        "name": "Pressure Machines Degital"
+    },
+    {
+        "_id": "63a7d5fff698244bc0a12f18",
+        "available": false,
+        "balance": "$2,788.08",
+        "picture": "https://i.ibb.co/KqwRMvm/71-Hv4-L7-XEQL-AC-UL600-SR600-400.jpg",
+        "color": "blue",
+        "name": "Pressure Machines Cazon"
+    },
+    {
+        "_id": "63a7d5ff7031c129055ed35b",
+        "available": false,
+        "balance": "$3,656.43",
+        "picture": "https://i.ibb.co/S6yxJ7F/380-3808031-learn-more-medical-equipments-png.jpg",
+        "color": "blue",
+        "name": "Stethoscope"
+    },
+    {
+        "_id": "63a7d5ffd92a6d0757bd4b2a",
+        "available": false,
+        "balance": "$1,040.85",
+        "picture": "https://i.ibb.co/02wPWFj/70041-16292840.jpg",
+        "color": "silver",
+        "name": "Nebulizer"
+    },
+    {
+        "_id": "63a7d5fffa9fa04f65a513c4",
+        "available": true,
+        "balance": "$3,165.48",
+        "picture": "https://i.ibb.co/N7PP4Cg/accu-chek-active-kit-roche-jp-737x737.jpg",
+        "color": "black",
+        "name": "Accu-Check"
+    },
+    {
+        "_id": "63a7d5ff4fa921d0e3fe914c",
+        "available": false,
+        "balance": "$1,951.70",
+        "picture": "https://i.ibb.co/Q6z2ny7/nebulizer-compressor-home-use-white-insulated-background-space-nebulizer-compressor-home-use-white-i.jpg",
+        "color": "silver",
+        "name": "Nabolizer full"
+    },
+    {
+        "_id": "63a7d5ff5d2b7dd37903928c",
+        "available": false,
+        "balance": "$2,135.65",
+        "picture": "https://i.ibb.co/rQ3G8RB/tensiometre-electronique-manopoire-omron-m1-plus.jpg",
+        "color": "Silver white",
+        "name": "Patterson Boone"
+    }
+]
