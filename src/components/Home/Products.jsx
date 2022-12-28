@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext } from 'react';
+import { ProductContext } from '../../App';
 import Singleproduct from './Singleproduct';
 
-const Products = () => {
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch('product.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+const Products = ({ addToCart }) => {
+    const products = useContext(ProductContext);
+
     return (
         <div className='w-3/4 mx-auto mt-20'>
             <h1 className='text-primary text-4xl font-bold underline mb-10'>Our Products</h1>
@@ -15,7 +12,8 @@ const Products = () => {
                 {
                     products.map(product => <Singleproduct
                         key={product._id}
-                        product={product} />)
+                        product={product}
+                        addToCart={addToCart} />)
                 }
             </div>
         </div>
