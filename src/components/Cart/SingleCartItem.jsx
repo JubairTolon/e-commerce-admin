@@ -10,7 +10,7 @@ const SingleCartItem = ({ item, handleRemove, handleChange, handlePrice }) => {
     return (
         <div className='flex justify-between px-10 items-center border-2 rounded bg-zinc-100 py-2'>
             <div className='w-1/5 p-2 flex items-center' style={{ height: '80px', width: '80px' }}><img src={item?.picture} alt="" /></div>
-            <div className='w-1/5'>{item?.name}</div>
+            <div className='w-1/5'>{item.name}</div>
             <div className='flex gap-2 items-center'>
                 <button onClick={() => handleChange(item, -1)} className="btn btn-sm bg-transparent btn-circle border-none">
                     <span className='text-zinc-400 text-2xl '><AiOutlineMinusCircle /></span>

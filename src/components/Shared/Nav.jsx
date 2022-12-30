@@ -1,6 +1,7 @@
 import { signOut } from '@firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { AiOutlineMenuFold } from 'react-icons/ai';
 import { BiUserCircle } from 'react-icons/bi';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
@@ -12,7 +13,8 @@ const Nav = ({ cartItems }) => {
 
     const logout = () => {
         signOut(auth);
-        navigate('/login')
+        navigate('/login');
+        localStorage.removeItem('accessToken');
     };
     return (
         <div className="navbar bg-primary sticky top-0 z-10">
@@ -55,6 +57,11 @@ const Nav = ({ cartItems }) => {
                             <li><Link to='/login'>Login</Link></li>
                         }
                     </ul>
+                </div>
+                <div className='navbar-end'>
+                    <label htmlFor="my-drawer-2" className="btn btn-outline drawer-button lg:hidden text-white text-2xl hover:bg-secondary hover:border-secondary">
+                        <span><AiOutlineMenuFold /></span>
+                    </label>
                 </div>
             </div>
         </div>

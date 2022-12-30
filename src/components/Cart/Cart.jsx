@@ -27,7 +27,7 @@ const Cart = ({ cartItems, setCartItems, handleChange }) => {
     }, [cartItems.length]);
 
     return (
-        <div className='mb-24'>
+        <div className='mb-24 min-h-screen'>
             <h1 className='text-center text-3xl text-primary font-bold my-2'>Your cart</h1>
             {cartItems.length > 0 ?
                 <div className='w-2/3 overflow-hidden mx-auto border-2 p-5 rounded-sm flex flex-col gap-2'>

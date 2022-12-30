@@ -1,6 +1,9 @@
 import { createContext, useState } from "react"
 import { Route, Routes } from "react-router-dom"
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard"
+import AdminOrders from "./components/AdminDashboard/AdminOrders"
+import AdminProducts from "./components/AdminDashboard/AdminProducts"
+import AdminUsers from "./components/AdminDashboard/AdminUsers"
 import Cart from "./components/Cart/Cart"
 import Checkout from "./components/Checkout/Checkout"
 import Home from "./components/Home/Home"
@@ -50,7 +53,15 @@ function App() {
     <ProductContext.Provider value={products}>
       <Nav cartItems={cartItems} />
       <Routes>
-        <Route path="/dashboard" element={<AdminDashboard></AdminDashboard>}></Route>
+        <Route path="/dashboard" element={
+          <RequireAuth>
+            <AdminDashboard />
+          </RequireAuth>
+        }>
+          <Route index element={<AdminProducts />}></Route>
+          <Route path="users" element={<AdminUsers />}></Route>
+          <Route path="orders" element={<AdminOrders />}></Route>
+        </Route>
         <Route path="/" element={
           <Home addToCart={addToCart} />}
         />
