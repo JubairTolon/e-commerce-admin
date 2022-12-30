@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "build/e-commerce-admin-20869",
+    "public": "build/e-commerce-admin-web-app",
     "ignore": [
       "firebase.json",
       "**/.*",
