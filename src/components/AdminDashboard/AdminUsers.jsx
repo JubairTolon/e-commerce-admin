@@ -7,7 +7,7 @@ const AdminUsers = () => {
     const [users, setUsers] = useState([]);
     const navigate = useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/users', {
+        fetch('https://e-commerce-admin-server-2pbg.vercel.app/users', {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
