@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { AiFillDelete } from 'react-icons/ai';
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 import { AiOutlineMinusCircle } from 'react-icons/ai';
 
-const SingleCartItem = ({ item, handleRemove, handleChange }) => {
+const SingleCartItem = ({ item, handleRemove, handleChange, handlePrice }) => {
+    useEffect(() => {
+        handlePrice()
+    }, [item.quantity])
     return (
         <div className='flex justify-between px-10 items-center border-2 rounded bg-zinc-100 py-2'>
             <div className='w-1/5 p-2 flex items-center' style={{ height: '80px', width: '80px' }}><img src={item?.picture} alt="" /></div>

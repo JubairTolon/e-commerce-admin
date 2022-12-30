@@ -1,10 +1,15 @@
 import { createContext, useState } from "react"
 import { Route, Routes } from "react-router-dom"
+import AdminDashboard from "./components/AdminDashboard/AdminDashboard"
 import Cart from "./components/Cart/Cart"
+import Checkout from "./components/Checkout/Checkout"
 import Home from "./components/Home/Home"
 import Footer from "./components/Shared/Footer"
 import Nav from "./components/Shared/Nav"
 import { useProducts } from "./hooks/useLoadProducts"
+import Login from "./Login/Login"
+import RequireAuth from "./Login/RequireAuth"
+import Signup from "./Login/Signup"
 
 export const ProductContext = createContext();
 
@@ -38,13 +43,14 @@ function App() {
 
     if (tempArr[ind].quantity === 0)
       tempArr[ind].quantity = 1;
-    setCartItems([...tempArr])
+    setCartItems([...tempArr]);
   }
 
   return (
     <ProductContext.Provider value={products}>
       <Nav cartItems={cartItems} />
       <Routes>
+        <Route path="/dashboard" element={<AdminDashboard></AdminDashboard>}></Route>
         <Route path="/" element={
           <Home addToCart={addToCart} />}
         />
@@ -53,6 +59,13 @@ function App() {
           setCartItems={setCartItems}
           handleChange={handleChange} />}
         />
+        <Route path="/checkout" element={
+          <RequireAuth>
+            <Checkout />
+          </RequireAuth>
+        } />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
       <Footer />
     </ProductContext.Provider>
